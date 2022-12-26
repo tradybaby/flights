@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.12 on darwin)" generated="20221129 14:57:23.603" rpa="false" schemaversion="3">
+<suite id="s1" name="Flightbot 2" source="/Users/elenagaggia/Downloads/FLIGHTS/flightbot_2.txt">
+<test id="s1-t1" name="Predict Delay" line="11">
+<kw name="Predict Delay" library="mytools">
+<arg>list.txt</arg>
+<arg>result.txt</arg>
+<msg timestamp="20221129 14:57:25.563" level="INFO">/Users/elenagaggia/opt/anaconda3/lib/python3.9/site-packages/sklearn/base.py:329: UserWarning: Trying to unpickle estimator LabelBinarizer from version 0.23.2 when using version 1.0.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/modules/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/Users/elenagaggia/opt/anaconda3/lib/python3.9/site-packages/sklearn/base.py:329: UserWarning: Trying to unpickle estimator MLPClassifier from version 0.23.2 when using version 1.0.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/modules/model_persistence.html#security-maintainability-limitations
+  warnings.warn(</msg>
+<status status="PASS" starttime="20221129 14:57:25.419" endtime="20221129 14:57:25.563"/>
+</kw>
+<status status="PASS" starttime="20221129 14:57:25.418" endtime="20221129 14:57:25.564"/>
+</test>
+<status status="PASS" starttime="20221129 14:57:23.604" endtime="20221129 14:57:25.564"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Flightbot 2">Flightbot 2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

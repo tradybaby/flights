@@ -1,0 +1,30 @@
+*** Settings ***
+Library  SeleniumLibrary
+
+*** Variables ***
+${url}                        http://blazedemo.com/
+${browser}                Chrome
+
+*** Test Cases ***
+Search Flight
+    [Tags]        search_flights
+    Open browser    ${url}    ${browser}
+    Select From List By Value   xpath://select[@name='fromPort']  Mexico City
+    Select From List by Value   xpath://select[@name='toPort']    Buenos Aires
+    Click Button    css:input[type='submit']
+    Click Button    css:input[type='submit']
+
+Book Flight (Personal Data)
+    [Tags]        book_flight_personal
+    Input Text        //input[@name="inputName"]        Elena Gaggia
+    Input Text      //input[@name="address"]          5th Avenue Central Park
+    Input Text      //input[@name="city"]             New York
+    Input Text      //input[@name="state"]            New York
+    Input Text      //input[@name="zipCode"]          10019
+
+Book Flight (Credit Card Data)
+    [Tags]          book_flight_payment    
+    Input Text      //input[@name="creditCardNumber"]  123412312341234
+    Input Text      //input[@name="creditCardYear"]    2021
+    Input Text      //input[@name="nameOnCard"]        Elena Gaggia
+    Click Button    css:input[type='submit']

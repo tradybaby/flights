@@ -1,0 +1,25 @@
+*** Settings ***
+Library             SeleniumLibrary
+Library             mytools.py
+
+*** Variables ***
+${url}                        http://127.0.0.1:4040
+${browser}      	          Chrome
+
+*** Test Cases ***
+Start Flights
+    Open Browser              ${url}    ${browser} 
+    Create My File            list.txt
+    Create My File            result.txt
+
+Enter Flight
+    Click Link      //a[@href="listflight"]
+    
+Iterate Through 
+    ${elements}=    Get WebElements    //td
+    FOR    ${element}    IN    @{elements}
+        Append My File    list.txt    ${element.text}
+    END
+
+Predict Delay
+    Predict Delay    list.txt    result.txt
